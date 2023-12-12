@@ -1,0 +1,39 @@
+[
+    {
+    "id":1,
+    "name":"Sapun",
+    "price": 200,
+    "image" : "static/sapun.jpg",
+    "description" : ""
+    },
+    {
+    "id":2,
+    "name":"Sapun",
+    "price": 200,
+    "image" : "static/sapun.jpg",
+    "description" : ""
+    
+    },
+{
+    "id":3,
+    "name":"Sapun",
+    "price": 200,
+    "image" : "static/sapun.jpg",
+    "description" : ""
+    },
+    {
+    "id":4,
+    "name":"Sapun",
+    "price": 200,
+    "image" : "static/sapun.jpg",
+    "description" : ""
+    }
+    ,
+    {
+    "id":5,
+    "name":"Sapun",
+    "price": 400,
+    "image" : "static/sapun.jpg",
+    "description" : ""
+    }
+]

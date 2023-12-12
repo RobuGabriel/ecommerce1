@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavanda din Livezi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</head>
+
+<body >
+    <header>
+        <nav style="margin: 0; padding: 2vh; z-index: 100;"> 
+            <h1><a href="index.html" style="text-decoration: none;color: black; ">Lavanda Din Livezi</a></h1>
+            <div class="topnav">
+                <div id="myLinks" style="display: none;">
+                <a href="catalog.html">Catalog</a>
+                <a class="scroll" href="#footer">Contact</a>
+                <a href="despre.html" >Despre</a>
+                </div>
+            <a href="#" onclick="ToggleMenu()" id="hamburgerIcon" >
+                <img src="static/menu.svg" alt="home" style="width: max(2.5vw,4vh); "id="hamburgerIcon">
+            </a>
+        </div>
+            
+           
+        <a href="#" class="icon-cart" style="text-decoration: none;position: relative;">
+            <img src="static/cart.svg" alt="cart" style="width: max(2.5vw,4vh);">
+            <span style="text-decoration: None; color: black;display: flex; justify-content: center;align-items: center; height: 20px; width: 30px; background-color: red; border-radius: 30px; position: absolute; top: 60% ; right: -10px;">0</span>
+        </a>
+
+        </nav>
+
+    </header>
+    
+    <div class="cartTab">
+        <h1>Shopping cart</h1>
+        <div class="listCart"></div>
+        <div class="buttons">
+            <button class="close1" style="cursor: pointer;border: none; font-size: 20px;background-color: lightgray;">Close</button>
+            <button class="checkOut" style="cursor: pointer;border: none; font-size: 20px; background-color: gray;" ><a href="checkout.html">Checkout</a></button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="bkg2" style="margin-bottom: 90px;">
+            <div class="dark-overlay"></div>
+            <video width="100%" height="60%" autoplay loop muted class="bkg">
+                <source src="static/production_id_5128911 (2160p).mp4" type="video/mp4">
+                <source src="static/production_id_5128911 (2160p).webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <h3 style="font-size: min(4vw,4vh); z-index: 1;" >Produse create pentru rafinamentul tau</h3>
+            <button class="bt" style=" backdrop-filter: blur(10px);"><a href="despre.html" style="text-decoration: none;color:white;">Despre noi</a></button>
+        </div>
+        <h2 >
+            Cine suntem...
+        </h2>
+        <p style="font-size: min(4vw,4vh);">
+           
+Familia noastră se dedică cultivării lavandei, promovând îngrijirea naturală și afecțiunea în comunitatea noastră.
+            <br>
+            <hr style="width: 70%; margin-bottom: 10vh; margin-top: 5vh;">
+        </p>
+    </section>
+    <section class="catalog">
+
+        <div class="half">
+            <img src="static/Sapun 2.jpg" alt="">
+            <div class="button-container">
+                <button><a href="catalog.html" style="text-decoration: none;color:lightgray">Produsele Noastre</a></button>
+            </div>
+        </div>
+
+    </section>
+    <h2>LOCATIE</h2>
+    <div class="caut">
+        <div class="text">
+            <h5 style="font-size: min(4vw,4vh);"></p>Ne gasiti la adresa:</h5>
+            <p style="font-size: min(4vw,4vh);">Judet: Suceava</p>
+            <p style="font-size: min(4vw,4vh);">Sat: Cacica</p>
+            <p style="font-size: min(4vw,4vh);">Numarul: 771</p>
+            <p style="font-size: min(4vw,4vh);">Telefon: 0751 425 215</p>
+        </div>
+        <div class="harta">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5376.437311447442!2d26.240762493674!3d47.64131764985461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4734fc2c6d34995b%3A0x3c94dcc2d3307eb7!2sKaufland!5e0!3m2!1sru!2sro!4v1700671015874!5m2!1sru!2sro"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <hr style="width: 90%;background-color: black; ">
+    <footer id="footer">
+        <ul>
+            <p>Retele socializare</p>
+            <li><a href="https://www.instagram.com/" class="icon"><img src="static/insta.svg" alt=""></a></li>
+            <li><a href="https://www.facebook.com/" class="icon"><img src="static/facebook.svg" alt="static"></a></li>
+        </ul>
+    
+        <ul>
+            <p>Termeni</p>
+            <li><a href="terms-and-conditions.html">Termeni si conditii</a></li>
+            <li><a href="delivery.html">Livrare</a></li>
+            <li><a href="returns.html">Retur</a></li>
+        </ul>
+    
+        <ul>
+            <p>Contact</p>
+            <li><a href="mailto:Lavandadinlivezi@gmail.com">Email: Lavandadinlivezi@gmail.com</a></li>
+            <li><a href="tel:+40759843493">Telefon: +40 0759 843 493</a></li>
+        </ul>
+    </footer>
+    
+
+
+
+    <script>
+        const iconCart = document.querySelector('.icon-cart');
+        const closeCart = document.querySelector('.close1');
+        const body = document.querySelector('body');
+        const listproductHTML = document.querySelector('.catalog');
+        let listCartHTML = document.querySelector('.listCart');
+        let iconCartSpan = document.querySelector('.icon-cart span');
+        let listProducts = [];
+        let carts = [];
+        iconCart.addEventListener('click', () => {
+            body.classList.toggle('showCart');
+        });
+        closeCart.addEventListener('click', () => {
+            body.classList.toggle('showCart');
+        });
+
+        const addDataToHtml = () => {
+
+            if (listProducts.length > 0) {
+                listProducts.forEach(product => {
+                    let newProduct = document.createElement('div');
+                    newProduct.classList.add('item');
+                    newProduct.dataset.id = product.id;
+                    listproductHTML.appendChild(newProduct);
+                });
+            }
+        };
+
+        listproductHTML.addEventListener('click', (event) => {
+            let positionClick = event.target;
+            if (positionClick.classList.contains('addCart')) {
+                let product_id = positionClick.parentElement.dataset.id;
+                addToCart(product_id);
+            }
+        });
+
+        const addToCart = (product_id) => {
+    let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
+    let productToAdd = listProducts.find((product) => product.id == product_id);
+
+    if (carts.length <= 0) {
+        carts = [{
+            product_id: product_id,
+            quantity: 1,
+            image: productToAdd.image,
+            name: productToAdd.name,
+            price: productToAdd.price
+        }];
+    } else if (positionThisProductInCart < 0) {
+        carts.push({
+            product_id: product_id,
+            quantity: 1,
+            image: productToAdd.image,
+            name: productToAdd.name,
+            price: productToAdd.price
+        });
+    } else {
+        carts[positionThisProductInCart].quantity = carts[positionThisProductInCart].quantity + 1;
+    }
+
+    addCartToHTML();
+    addCartToMemory();
+};
+
+const addCartToMemory = () => {
+    localStorage.setItem('cart', JSON.stringify(carts));
+};
+
+
+
+        const addCartToHTML = () => {
+            listCartHTML.innerHTML = '';
+            let totalQuantity = 0;
+            if (carts.length > 0) {
+                carts.forEach(cart => {
+                    totalQuantity = totalQuantity + cart.quantity;
+                    let newCart = document.createElement('div');
+                    newCart.classList.add('item');
+                    let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
+                    let info = listProducts[positionProduct];
+                    newCart.innerHTML = `
+                        <div class="image">
+                            <img src="${info.image}" alt="">
+                        </div>
+                        <div class="name">
+                            ${info.name}
+                        </div>
+                        <div class="totalPrice">
+                            ${info.price * cart.quantity} Lei
+                        </div>
+                        <div class="quantity">
+                            <span class="minus" onclick="decreaseQuantity(${cart.product_id})"><</span>
+                            <span>${cart.quantity}</span>
+                            <span class="plus" onclick="increaseQuantity(${cart.product_id})">></span>
+                        </div>
+                    `;
+                    listCartHTML.appendChild(newCart);
+                });
+            }
+            iconCartSpan.innerText = totalQuantity;
+        };
+
+        // Function to decrease quantity
+        const decreaseQuantity = (product_id) => {
+    let cartIndex = carts.findIndex((value) => value.product_id == product_id);
+    if (cartIndex >= 0) {
+        if (carts[cartIndex].quantity > 1) {
+            carts[cartIndex].quantity--;
+            addCartToHTML(); // Update the cart display
+            addCartToMemory(); // Save the modified cart to local storage
+        } else {
+            carts.splice(cartIndex, 1);
+            addCartToHTML(); // Update the cart display
+            addCartToMemory(); // Save the modified cart to local storage
+        }
+    }
+};
+
+
+        // Function to increase quantity
+        const increaseQuantity = (product_id) => {
+            let cartIndex = carts.findIndex((value) => value.product_id == product_id);
+            if (cartIndex >= 0) {
+                carts[cartIndex].quantity++;
+                addCartToHTML();
+                 // Update the cart display
+            }
+        };
+
+        const initApp = () => {
+            fetch('products.json')
+                .then(response => response.json())
+                .then(data => {
+                    listProducts = data;
+                    addDataToHtml();
+                    if (localStorage.getItem('cart')) {
+                        carts = JSON.parse(localStorage.getItem('cart'));
+                        addCartToHTML();
+                    }
+                });
+        };
+
+        initApp();
+
+        function openPopup(image, name, price, description) {
+            // Get references to the popup elements
+            const popupImage = document.getElementById('popupImage');
+            const popupTitle = document.getElementById('popupTitle');
+            const popupPrice = document.getElementById('popupPrice');
+            const popupDescription = document.getElementById('popupdescription');
+            // Set the content of the popup elements
+            popupImage.src = image;
+            popupTitle.innerText = name;
+            popupPrice.innerText = `Price: ${price}`;
+            popupDescription.innerText = description;
+            // Display the popup
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        function closePopupOutside(event) {
+            var popup = document.getElementById('popup');
+            // Check if the clicked element is not within the popup
+            if (!popup.contains(event.target)) {
+                closePopup();
+            }
+        }
+
+        function ToggleMenu() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        document.addEventListener("click", function (event) {
+            var x = document.getElementById("myLinks");
+            var hamburgerIcon = document.getElementById("hamburgerIcon");
+            if (!event.target.matches('#myLinks') && !event.target.matches('#hamburgerIcon')) {
+                x.style.display = "none";
+                hamburgerIcon.style.display = "block";
+            }
+        });
+
+        $(document).ready(function () {
+            // Add smooth scrolling to all links with the "scroll" class
+            $(".scroll").on("click", function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $("html, body").animate({
+                            scrollTop: $(hash).offset().top,
+                        },
+                        800,
+                        function () {
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        }
+                    );
+                } // End if
+            });
+        });
+    </script>
+</body>
+
+</html>

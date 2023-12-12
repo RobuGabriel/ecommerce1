@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="catalog.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+<body style="font-family: Montserrat;">
+    <header>
+        <nav> 
+            <h1><a href="index.html" style="text-decoration: none;color: black;">Lavanda Din Livezi</a></h1>
+            <div class="topnav">
+                <div id="myLinks" style="display: none;">
+                <a href="catalog.html">Catalog</a>
+                <a class="scroll" href="#footer">Contact</a>
+                <a href="despre.html">Despre noi</a>
+                </div>
+            <a href="#" onclick="ToggleMenu()">
+                <img src="static/menu.svg" id="hamburgerIcon" alt="home">
+            </a>
+        </div>
+            
+           
+            <a href="#">
+                <img src="static/cart.svg" alt="cart">
+            </a>
+        </nav>
+
+    </header> 
+    <p style="text-align: center; font-size: min(5vh,5vw); font-weight: 700;">Despre Noi</p> 
+    <img src="static/hero.jpg" alt="" style="height: max(30vh,30vw); width: 80%;">
+    <div class="container"><p style="font-size: min(4vw,4vh); text-align:center; padding: 3%;">
+        Bine ați venit în minunata noastră lume a lavandei, unde parfumul delicat și farmecul rural se împletesc într-o experiență unică pentru toți cei care ne trec pragul. Suntem o familie dedicată cultivării lavandei în inima pitorească a localității Cacica, iar în mijlocul acestui colț de rai, vă invităm să descoperiți frumusețea și beneficiile acestei plante uimitoare.
+        <br>
+        Ceea ce ne deosebește este pasiunea noastră pentru lavandă și modul în care împărtășim această pasiune cu oaspeții noștri. Călătorii care aleg să își petreacă timpul la noi nu doar că vor experimenta liniștea și frumusețea naturii, dar vor avea și ocazia de a înțelege procesul de cultivare a lavandei, de la răsad la floare plină de culoare și parfum.
+        <br>
+        Cazarea noastră oferă oaspeților șansa de a se retrage într-o casuță primitoare, unde confortul și autenticitatea se întâlnesc. Fiecare casă este amenajată cu grijă, îmbinând tradiționalul cu modernul, pentru a crea un ambient plăcut și relaxant. Veți simți că vă aflați în mijlocul naturii, departe de agitația cotidiană, dar cu toate facilitățile necesare pentru a vă bucura de o ședere confortabilă.
+        <br>
+        În plus față de experiența de cazare, vă invităm să explorați și gama noastră de produse create cu grijă din lavandă. De la uleiuri esențiale și săpunuri artizanale la perne parfumate și pungi de lavandă, fiecare produs reflectă dragostea noastră pentru această plantă minunată. Avem grijă să folosim doar lavandă crescută în propria noastră grădină, astfel încât să vă oferim produse cu adevărat autentice și de înaltă calitate.
+        
+        Așadar, indiferent dacă sunteți în căutarea unei evadări liniștite în mijlocul naturii sau a unor produse de lux pe bază de lavandă, vă invităm să ne călătoriți și să vă bucurați de farmecul unic al lavandei, alături de familia noastră. La noi, veți găsi nu doar o cazare, ci o experiență memorabilă plină de culoare, aromă și ospitalitate autentică.</p>
+    </div>
+    <img src="static/hero.jpg" alt="" style="height: max(30vh,30vw);width: 80%; margin-bottom: 50px;">
+   
+    <hr style="width: 90%;background-color: black; ">
+
+    <footer id="footer">
+        <ul>
+            <p>Retele socializare</p>
+            <li><a href="https://www.instagram.com/" class="icon"><img src="static/insta.svg" alt=""></a></li>
+            <li><a href="https://www.facebook.com/" class="icon"><img src="static/facebook.svg" alt="static"></a></li>
+        </ul>
+    
+        <ul>
+            <p>Termeni</p>
+            <li><a href="terms-and-conditions.html">Termeni si conditii</a></li>
+            <li><a href="delivery.html">Livrare</a></li>
+            <li><a href="returns.html">Retur</a></li>
+        </ul>
+    
+        <ul>
+            <p>Contact</p>
+            <li><a href="mailto:Lavandadinlivezi@gmail.com">Email: Lavandadinlivezi@gmail.com</a></li>
+            <li><a href="tel:+40759843493">Telefon: +40 0759 843 493</a></li>
+        </ul>
+    </footer>
+    
+
+    <script>
+
+
+function openPopup(imageSrc, title, price, description) {
+    document.getElementById('popupImage').src = imageSrc;
+    document.getElementById('popupTitle').innerText = title;
+    document.getElementById('popupPrice').innerText = price;
+    document.getElementById('popupdescription').innerText = description;
+
+    // Disable body scrollbar
+    document.body.style.overflow = 'hidden';
+
+    // Set a timeout to ensure the transition is noticeable
+    setTimeout(function() {
+        document.getElementById('popup').style.display = 'block';
+        
+        // Add a click event listener to the entire document
+        document.addEventListener('click', closePopupOutside);
+    }, 0);
+}
+
+function closePopup() {
+    // Enable body scrollbar
+    document.body.style.overflow = 'auto';
+
+    document.getElementById('popup').style.display = 'none';
+
+    // Remove the click event listener when the popup is closed
+    document.removeEventListener('click', closePopupOutside);
+}
+
+function closePopupOutside(event) {
+    var popup = document.getElementById('popup');
+
+    // Check if the clicked element is not within the popup
+    if (!popup.contains(event.target)) {
+        closePopup();
+    }
+}
+
+
+
+
+
+
+
+
+function ToggleMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+document.addEventListener("click", function (event) {
+    var x = document.getElementById("myLinks");
+    var hamburgerIcon = document.getElementById("hamburgerIcon");
+
+    if (!event.target.matches('#myLinks') && !event.target.matches('#hamburgerIcon')) {
+        x.style.display = "none";
+        hamburgerIcon.style.display = "block";
+    }
+});
+$(document).ready(function () {
+        // Add smooth scrolling to all links with the "scroll" class
+        $(".scroll").on("click", function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $("html, body").animate(
+                    {
+                        scrollTop: $(hash).offset().top,
+                    },
+                    800,
+                    function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    }
+                );
+            } // End if
+        });
+    });
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>

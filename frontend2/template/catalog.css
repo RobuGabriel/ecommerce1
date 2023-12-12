@@ -1,0 +1,418 @@
+body{
+    text-align: center;
+}
+h1{
+    font-family: Montserrat;
+    font-size: min(4vw,4vh);
+    margin: 2px;
+}
+nav {
+    background-color: white;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0;
+    padding: 2vh;
+    z-index: 1;
+    border-bottom: 2px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+nav *{
+    box-sizing: border-box;
+}
+nav a img{
+    height:auto;
+    width: 25px;
+}
+.topnav {
+
+    position: relative;
+    
+}
+.topnav a {
+  color:gray;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 5px;
+}
+
+#myLinks {
+    display: none;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 60px;
+}
+
+
+
+header{
+    margin: 0;
+    padding: 0;
+
+}
+.text-catalog{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: min(4vw,1.5rem);
+    margin-bottom: 5vh;
+}
+.text-catalog span{
+    font-family: Montserrat;
+    margin: 1.5vw;
+    font-weight: 500;
+}
+.text-catalog a{
+    text-decoration: None;
+    color:gray;
+}
+.text-catalog a:hover{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.p{
+    font-family: Montserrat;
+    font-size: min(5vh,5vw);
+    font-weight: bolder;
+    margin-bottom: min(15vh,13vw);
+    margin-top: 6vh;
+}
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); /* Change 200px to your desired column size */
+    text-align: center;
+    font-family: Montserrat;
+   
+}
+
+
+.catalog p{
+    font-weight: bold;
+    font-size: min(5vw,2rem);
+    margin: 0;
+    padding: 0;
+}
+
+.item{
+    
+    margin: 10px;
+    margin-bottom: 5vh;
+    text-align: left;
+    cursor: pointer;
+    padding: 1vw;
+
+}
+
+.item p{
+    font-weight:600;
+    font-size: min(3.5vw,3.5vh);
+}
+.item p1{
+    font-weight: 400;
+    font-size: min(3.5vw,3.5vh);
+}
+.item img{
+  width: 100%;
+  height: 80%;
+
+}
+.item .addCart{
+    cursor: pointer;
+    font-size: min(3vw,3vh);
+}
+.bt{
+    position: relative;
+    width: 15vh;
+    height: 6vh;
+    margin: 0;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+}
+
+footer {
+    display: grid;
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 2vw;
+    margin: 0;
+}
+@media screen and (width>500px) {
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+footer p {
+    font-weight: 600;
+    font-size: min(3vw,2.5vh);
+
+}
+
+
+footer li {
+    font-weight:400;
+    font-size: min(3vw,2vh);
+    list-style: none;
+    text-decoration: none;
+}
+footer li a{
+    text-decoration: none;
+    color: gray;
+}
+.icon{
+    width: 100%;
+}
+.icon img{
+    width: 5vh;
+}
+
+.popup {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: auto; 
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.popup-content {
+    transition: ease-in-out 0.5s; 
+}
+
+.popup img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.container{
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin: 0;
+    padding-left:5%;
+    padding-right: 5%;
+
+}
+.container p:nth-child(2){
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: min(4.5vw,3vh);
+    margin: 0;
+}
+.container p:nth-child(3){
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: min(4vw,3vh);
+}
+.addCart{
+    border-radius: 3px;
+    color: black;
+    margin: 1px solid black;
+    margin-bottom: 10%;
+    font-size: min(3.5vw,2.5vh);
+    width:100%;height:10%;text-align:center; background-color:lightgreen; border: none ; box-shadow:0 5px 10px;
+}
+.addCart:hover{
+    box-shadow: 0 3px 3px;
+}
+body.showCart {
+    overflow: hidden;
+}
+
+.popup-nav{
+    display: flex;
+    position: sticky;
+    padding: 3%;
+    background-color: white;
+}
+.close {
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+#popupdescriere{
+    font-size: 3vw;
+}
+/* Add this to your existing CSS file or create a new one */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+@media screen and (width>700px) {
+    .popup img{
+        width:100%;
+    }
+    .popup{
+        width: 50%;
+        background-color: white;
+        box-shadow: 0 30px 40px rgba(0, 0, 0, 0.6);
+        
+    }
+    .popup-nav{
+        background-color: white;
+    }
+
+
+}
+@media screen and (width>600px) {
+    .catalog{
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); 
+    }
+}
+@media screen and (width>800px) {
+    .catalog{
+    grid-template-columns: repeat(auto-fit, minmax(380px,1fr)); 
+    }
+}
+
+.cartTab{
+    width: 400px;
+    background-color: white;
+    color:  black;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    right: -1000px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px ;
+
+
+}
+body.showCart .cartTab{
+    right: 0;
+}
+
+
+.cartTab h1{
+    padding:20px;
+    margin: 0;
+    
+}
+.cartTab .buttons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-weight: 500;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    
+}
+.cartTab .listCart .item img{
+    width: 100%;
+    padding: 10px;
+
+}
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    text-align: center;
+    align-items: center;
+
+}
+@media screen and (width>800px) {
+    .cartTab .listCart .item{
+        display: grid;
+        grid-template-columns: 25% 25% 80px 1fr;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+
+    }
+    .cartTab{
+        width: 50%;
+    }
+    
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    
+}
+.listCart .item:nth-child(even){
+    background-color:#d3d3d33a;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
